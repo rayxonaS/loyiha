@@ -27,7 +27,7 @@ function Register() {
           >
             <h2 className="mainText">Register</h2>
             <FormInput label="Email:" name="email" type="email" />
-            <FormInput label="Dispay Name:" name="displayName" type="text" />
+            <FormInput label="Display Name:" name="displayName" type="text" />
             <FormInput label="Password:" name="password" type="password" />
             <div className="flex items-center gap-5 mt-8 mb-8">
               {!isPending && (
