@@ -7,8 +7,8 @@ function OnlineUsers() {
       {data &&
         data.map((u) => {
           return (
-            <div className="main-container ">
-              <div className="flex gap-10" key={u.id}>
+            <div className="main-container">
+              <div className="flex gap-10 container  items-center" key={u.id}>
                 <img
                   className="w-24 rounded-4xl border-b-blue-500 border-8 mt-2"
                   src={u.photoURL}

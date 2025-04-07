@@ -37,13 +37,19 @@ body {
   font-family: monospace;
 }
 
-.container {
-  width: 400px;
-  height: auto;
-  padding: 30px;
-  background-color: white;
-  border-radius: 8px;
-  border: 2px solid grey;
+.body-container {
+  background-color: #f3f3f0;
   display: flex;
-  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  padding: 20px;
 }
