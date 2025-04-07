@@ -32,3 +32,18 @@
     @apply text-3xl text-center mb-5 font-bold text-white md:text-black;
   }
 }
+
+body {
+  font-family: monospace;
+}
+
+.container {
+  width: 400px;
+  height: auto;
+  padding: 30px;
+  background-color: white;
+  border-radius: 8px;
+  border: 2px solid grey;
+  display: flex;
+  gap: 20px;
+}

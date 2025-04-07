@@ -6,7 +6,13 @@ function Home() {
     <div>
       {data &&
         data.map((r) => {
-          return <h2 key={r.id}>{r.title}</h2>;
+          return (
+            <div>
+              <h2 className="text-center mb-10 mt-5 text-4xl" key={r.id}>
+                List of users:
+              </h2>
+            </div>
+          );
         })}
     </div>
   );
