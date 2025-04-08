@@ -8,8 +8,8 @@ function Home() {
         data.map((r) => {
           return (
             <div>
-              <h2 className="text-center mb-10 mt-5 text-4xl" key={r.id}>
-                List of users:
+              <h2 className="text-center text-4xl font-bold mb-10">
+                List of Recipes
               </h2>
             </div>
           );

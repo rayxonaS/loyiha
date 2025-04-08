@@ -3,30 +3,30 @@ import { useCollection } from "../hooks/useCollection";
 function OnlineUsers() {
   const { data } = useCollection("users");
   return (
-    <div>
-      {data &&
-        data.map((u) => {
-          return (
-            <div className="main-container">
-              <div
-                className="flex gap-10 container  items-center group"
-                key={u.id}
-              >
-                <img
-                  className="w-24 rounded-4xl border-b-blue-500 border-8 mt-2 hover:bg-amber-300 "
-                  src={u.photoURL}
-                  alt={u.displayName}
-                />
-                <div className="flex flex-col">
-                  <h1 className="text-2xl mt-5">{u.displayName}</h1>
-                  <p className="text-xl text-green-800 font-bold">
-                    {u.online ? "online" : "offline"}
-                  </p>
+    <div className="w-64 bg-white shadow-md p-5 rounded-r-2xl hidden md:block">
+      <h3 className="text-lg font-bold text-gray-800 mb-4">🟢 Online Users</h3>
+      <div className="space-y-4">
+        {data &&
+          data.map((u) => {
+            return (
+              <div className="flex items-center gap-3">
+                <div key={u.id}>
+                  <img
+                    className="w-10 h-10 rounded-full border border-indigo-500 "
+                    src={u.photoURL}
+                    alt={u.displayName}
+                  />
+                  <div>
+                    <h1 className="text-2xl mb-2">{u.displayName}</h1>
+                    <p className="text-sm font-semibold ">
+                      {u.online ? "online" : "offline"}
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
-          );
-        })}
+            );
+          })}
+      </div>
     </div>
   );
 }
