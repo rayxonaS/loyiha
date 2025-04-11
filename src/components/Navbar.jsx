@@ -8,9 +8,9 @@ function Navbar() {
   return (
     <header className="bg-base-200 shadow-lg">
       <div className="navbar main-container">
-        <div className="navbar-start flex items-center gap-2">
+        <div className="navbar max-w-screen-xl mx-auto px-4 flex justify-between items-center">
           <Link
-            className=" bg-gray-100 flex items-center gap-2 p-2 rounded-md"
+            className="flex items-center gap-2 bg-gray-100 p-2 rounded-md"
             to="/"
           >
             <img
@@ -18,7 +18,9 @@ function Navbar() {
               alt=""
               className="w-8 h-8"
             />
-            <span className="font-bold text-lg text-green-700">FoodieHub</span>
+            <span className="font-bold text-lg text-green-700 hidden sm:inline">
+              FoodieHub
+            </span>
           </Link>
         </div>
         <div className="navbar-center"></div>
@@ -27,12 +29,19 @@ function Navbar() {
             <div className="avatar"></div>
           </div>
           {!isPending && (
-            <button onClick={logout} className="btn btn-secondary btn-outline">
+            <button
+              onClick={logout}
+              className="btn btn-sm btn-secondary btn-outline hidden sm:inline-block"
+            >
               Logout
             </button>
           )}
           {isPending && (
-            <button onClick={logout} className="btn btn-secondary" disabled>
+            <button
+              onClick={logout}
+              className="btn btn-sm  btn-secondary loading hidden sm:inline-block"
+              disabled
+            >
               Loading
             </button>
           )}
